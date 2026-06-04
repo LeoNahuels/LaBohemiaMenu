@@ -140,6 +140,7 @@
 <div class="tabs">
   <button class="tab-btn active" onclick="switchTab('menu',this)">🍽️ Menú</button>
   <button class="tab-btn" onclick="switchTab('promos',this)">🔥 Promos</button>
+  <button class="tab-btn" onclick="switchTab('novedades',this)">📣 Novedades</button>
 </div>
 
 <!-- MENU TAB -->
@@ -213,6 +214,63 @@
       <div class="promo-price">$15.000</div>
       <button class="promo-btn" onclick="promoWA('2 Choris bohemios especiales — $15.000')">💬 Pedir</button>
     </div>
+  </div>
+</div>
+
+<!-- NOVEDADES TAB -->
+<div id="tab-novedades" class="tab-content">
+  <div class="promos-wrap">
+    <div class="section-title" style="margin-bottom:6px">📣 Novedades</div>
+    <p style="font-size:.78rem;color:var(--muted);margin-bottom:20px;line-height:1.6;">Las últimas novedades de La Bohemia. ¡Seguinos en Instagram para estar siempre al tanto!</p>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;">
+      <!-- Instagram embed placeholder -->
+      <div style="padding:20px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:10px;">📸</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--accent);margin-bottom:6px;">@labohemiasj</div>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.6;margin-bottom:16px;">Seguinos en Instagram para ver todas nuestras novedades, promos del día y fotos fresquitas de nuestros productos.</p>
+        <a href="https://www.instagram.com/labohemiasj" target="_blank"
+           style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white;border:none;border-radius:12px;padding:13px 24px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.9rem;text-decoration:none;transition:opacity .2s;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Ver en Instagram
+        </a>
+      </div>
+    </div>
+
+    <!-- Recent posts grid (manual, update when needed) -->
+    <div class="section-title" style="margin-bottom:12px;font-size:1rem;">🆕 Últimas publicaciones</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;" id="igPostsGrid">
+      <!-- Post cards will be here -->
+      <a href="https://www.instagram.com/labohemiasj" target="_blank"
+         style="background:var(--card);border:1px solid var(--border);border-radius:12px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-decoration:none;transition:border-color .2s;"
+         onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.8rem;">📸</div>
+        <div style="font-size:.7rem;color:var(--muted);text-align:center;padding:0 8px;">Ver en<br>Instagram</div>
+      </a>
+      <a href="https://www.instagram.com/labohemiasj" target="_blank"
+         style="background:var(--card);border:1px solid var(--border);border-radius:12px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-decoration:none;transition:border-color .2s;"
+         onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.8rem;">🍕</div>
+        <div style="font-size:.7rem;color:var(--muted);text-align:center;padding:0 8px;">Ver en<br>Instagram</div>
+      </a>
+      <a href="https://www.instagram.com/labohemiasj" target="_blank"
+         style="background:var(--card);border:1px solid var(--border);border-radius:12px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-decoration:none;transition:border-color .2s;"
+         onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.8rem;">🍔</div>
+        <div style="font-size:.7rem;color:var(--muted);text-align:center;padding:0 8px;">Ver en<br>Instagram</div>
+      </a>
+      <a href="https://www.instagram.com/labohemiasj" target="_blank"
+         style="background:var(--card);border:1px solid var(--border);border-radius:12px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-decoration:none;transition:border-color .2s;"
+         onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:1.8rem;">🥩</div>
+        <div style="font-size:.7rem;color:var(--muted);text-align:center;padding:0 8px;">Ver en<br>Instagram</div>
+      </a>
+    </div>
+
+    <a href="https://www.instagram.com/labohemiasj" target="_blank"
+       style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:transparent;border:1px solid var(--accent);border-radius:12px;padding:13px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.9rem;color:var(--accent);text-decoration:none;">
+      Ver todas las publicaciones →
+    </a>
   </div>
 </div>
 
@@ -346,7 +404,7 @@ const menu=[
     {id:"p_prov",name:"Provenzal",img:null,desc:"Muzzarella con provenzal casero.",price:10000},
     {id:"p_fug",name:"Fugazza",img:null,desc:"Cebolla caramelizada sobre masa esponjosa.",price:12000},
     {id:"p_napo",name:"Napolitana",img:IMGS.napolitana,desc:"Salsa, muzzarella, tomate, orégano, ají y aceitunas.",price:14000,badge:"⭐ Top"},
-    {id:"p_esp",name:"Pizza Especial",img:IMGS.pizza_especial,desc:"Muzzarella, jamón, huevo, morrón y aceitunas.",price:16000},
+    {id:"p_esp",name:"Pizza Especial",img:IMGS.pizza_especial,desc:"Muzzarella, jamón, huevo, morrón y aceitunas.",price:17000},
     {id:"p_cal",name:"Calabresa",img:null,desc:"Muzzarella con salchicha calabresa.",price:17000},
     {id:"p_anch",name:"Anchoas",img:null,desc:"Muzzarella con filetes de anchoa.",price:17000},
     {id:"p_palm",name:"Palmitos",img:null,desc:"Muzzarella con palmitos al natural.",price:17000},
@@ -501,7 +559,7 @@ Hola! quiero pedir:
   • ${promo}
 
 ¿Me pueden confirmar disponibilidad? 😊`;
-  window.open(`https://wa.me/542644811666?text=${encodeURIComponent(msg)}`,"_blank");
+  window.open(`https://wa.me/54264481666?text=${encodeURIComponent(msg)}`,"_blank");
 }
 
 function sendWhatsApp(){
@@ -539,7 +597,7 @@ function sendWhatsApp(){
 💰 *Total estimado: ${fmt(total)}*`;
   const notes=document.getElementById("notes").value.trim();
   if(notes)msg+=`\n📝 *Observaciones:* ${notes}`;
-  window.open(`https://wa.me/542644811666?text=${encodeURIComponent(msg)}`,"_blank");
+  window.open(`https://wa.me/54264481666?text=${encodeURIComponent(msg)}`,"_blank");
 }
 
 renderMenu();
